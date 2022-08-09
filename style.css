@@ -13,7 +13,6 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
-  background-image: url("https://source.unsplash.com/random/1024x720?mountain");
   background-position: center center;
   background-size: cover;
   transition: 0.5s ease;
@@ -39,7 +38,6 @@ body::before {
 }
 
 .slide {
-  background-image: url("https://source.unsplash.com/random/1024x720?mountain");
   opacity: 0;
   height: 100vh;
   width: 100vw;
@@ -86,5 +84,19 @@ button:focus {
   }
   body {
     background-image: url("https://source.unsplash.com/random/720x1024?mountain");
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .arrow.arrow-left {
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    top: calc(15vh - 78px);
+  }
+  .arrow.arrow-right {
+    right: 50%;
+    top: calc(85vh);
+    bottom: calc(15vh - 78px);
+    transform: translateX(50%) rotate(90deg);
   }
 }
