@@ -23,15 +23,13 @@ function setActiveSlide(index) {
 }
 
 function nextImg() {
-  if (!(activeSlide + 1 < slides.length && activeSlide + 1 >= 0)) return
-  activeSlide++
+  activeSlide >= slides.length - 1 ? (activeSlide = 0) : activeSlide++
   setActiveSlide(activeSlide)
   setBgToBody(activeSlide)
 }
 
 function prevImg() {
-  if (!(activeSlide - 1 < slides.length && activeSlide - 1 >= 0)) return
-  activeSlide--
+  activeSlide <= 0 ? (activeSlide = slides.length - 1) : activeSlide--
   setActiveSlide(activeSlide)
   setBgToBody(activeSlide)
 }
